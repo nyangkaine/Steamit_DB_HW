@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError as e:
+    print(f"Matplotlib 모듈을 찾을 수 없습니다: {e}")
+
 
 # Streamlit 앱 제목
 st.title("보험 DB 분석 streamlit 웹")  # 웹 애플리케이션의 제목을 설정합니다.
